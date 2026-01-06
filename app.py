@@ -30,12 +30,11 @@ st.markdown("Predicting cryptocurrency prices using deep learning (LSTM)")
 # -------------------------------------------------
 
 @st.cache_data
-def load_data():
-    df = preprocess_data()
-    df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+def load_data(ticker):
+    df = preprocess_data(ticker)
     return df
 
-df = load_data()
+df = load_data(ticker)
 close_prices = df[["Close"]].values
 
 # -------------------------------------------------
