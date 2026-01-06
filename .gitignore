@@ -5,8 +5,8 @@ venv/
 __pycache__/
 *.pyc
 
-# Data files (optional)
-data/*.csv
+# # Data files (optional)
+# data/*.csv
 
 # OS files
 .DS_Store
